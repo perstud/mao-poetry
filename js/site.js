@@ -140,9 +140,9 @@
     const back = link("← 返回诗词文库",url("library",filters()),"back");
     if (!p) article.append(node("h1","未找到该篇目"),back);
     else {
-      document.title = p.title + " · 毛主席诗词学习网";
+      document.title = p.title + " · 教员诗词学习网";
       article.append(node("div",collections.get(p.collection).name + " · 原文" + (p.count > 1 ? " · " + p.count + "首" : ""),"kicker"),
-        rich("h1",p.title),node("p","毛泽东","author"),node("p",p.originalDate,"metadata"));
+        rich("h1",p.title),node("p","教员","author"),node("p",p.originalDate,"metadata"));
       if (p.preface.length) {
         const preface = node("div",null,"preface");
         preface.setAttribute("aria-label","作者题记");
